@@ -1,0 +1,116 @@
+
+#indexTitle {
+    color: #A10E56;
+    text-align: center;
+    font-size: 125px;
+    margin: 0;
+    font-family: 'Special Elite', cursive;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    back
+}
+
+#welcome {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Special Elite', cursive;
+}
+#mainNavLinks {
+    text-align: center;
+    text-decoration: none;
+  
+}
+
+ul {
+    list-style-type: none;
+   
+}
+#mainNavLinks ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    
+}
+
+#mainNavLinks li {
+    display: block;
+    margin-right: 10px;
+    
+}
+
+    #mainNavLinks li a {
+        display: block; 
+        border: 1px solid red;
+        border-width:4px;
+        padding: 5px;
+        margin-bottom:40px;
+       
+    }
+        #mainNavLinks li a:hover {
+            background-color: black;
+            color: red; 
+        }
+        
+     
+
+#navLinks {
+    background-color: black;
+    overflow: hidden;
+}
+
+    #navLinks ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    #navLinks li {
+        margin: 0 10px;
+    }
+
+    #navLinks a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        #navLinks a:hover {
+            background-color: black;
+            color: red;
+        }
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top:100px;
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
