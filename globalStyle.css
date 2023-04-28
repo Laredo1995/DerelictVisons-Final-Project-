@@ -10,7 +10,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("home.JPG");
     background-size: cover;
     background-repeat: no-repeat;
-    back
+    
 }
 
 #welcome {
@@ -113,4 +113,32 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+#about {
+    color: white;
+    text-align: center;
+    border: 10px groove grey;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Permanent Marker', cursive;
+}
+#aboutDV {
+    color: #A10E56;
+    font-family: 'Special Elite', cursive;
+    font-size: 28px;
+    
+}
+
+    #aboutDV a {
+        text-decoration: none;
+    }
+
+#about a {
+    text-decoration: none;
+    color: inherit;
+    color:red;
+}
+
+#about h3 {
+    background-color: transparent;
 }
