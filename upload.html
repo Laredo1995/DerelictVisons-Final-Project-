@@ -1,41 +1,34 @@
-<!Doctype html>
-<title>Derelic Visions/photos</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Derelict Visions/photos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globalStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="upload.js"></script>
+</head>
+<body>
+    <div id="webTitle">
+        <h1 id="indexTitle">Derelict Visions</h1>
+    </div>
+    <nav id="navLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="forum.html">Community Forum</a></li>
+            <li><a href="about.html">About Derelict Visions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <form id="upload-form" method="POST" enctype="multipart/form-data" action="upload.php">
+        <label for="picture">Select picture to upload:</label>
+        <input type="file" id="picture" name="picture"><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+        <button type="submit" name="submit" id="upload-button">upload</button>
+    </form>
 
-    <html>
-    
-    <head>
-        <title>Derelict Visions</title>
-        <!-- <link rel="stylesheet" href="upload.css" />-->
-        <link rel="stylesheet" href="globalStyle.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-
-    </head>
-        <body>
-            <div id="webTitle">
-                <h1 id="indexTitle">Derelict Visions</h1>
-            </div>
-            <nav id="navLinks">
-                <ul>
-
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="forum.html">Comunity Forum</a></li>
-                    <li><a href="about.html">About Derelic Visions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-
-            </nav>
-
-            <input type="file" id="image_input" accept="image/png, image/jpg" multiple/> 
-            
-            <div id="display_image"></div>
-            <script src="upload.js"></script>
-        </body>
-
-
-
-
-
-    
+    <div id="image-container"></div>
+</body>
 </html>

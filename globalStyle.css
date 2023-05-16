@@ -55,8 +55,12 @@ ul {
             background-color: black;
             color: red; 
         }
-        
-     
+
+
+#navLinks ul li a {
+    font-family: 'Special Elite', cursive;
+}
+
 
 #navLinks {
     background-color: black;
@@ -81,11 +85,13 @@ ul {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        font-family: 'Special Elite', cursive;
     }
 
         #navLinks a:hover {
             background-color: black;
             color: red;
+            border: 1px solid red;
         }
 form {
     max-width: 500px;
@@ -106,7 +112,23 @@ label {
     font-weight: bold;
 }
 
-input[type="submit"] {
+#upload-button{
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#upload-button {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit{
     background-color: #008CBA;
     color: #fff;
     border: none;
@@ -142,3 +164,4 @@ input[type="submit"] {
 #about h3 {
     background-color: transparent;
 }
+
