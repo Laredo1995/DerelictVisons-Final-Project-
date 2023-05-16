@@ -1,36 +1,31 @@
 <?php
-// Define the database connection details
-$servername = "aws.connect.psdb.cloud"; // Replace with your server name
-$username = "zdpa2qu1uriqm4c2zg1h"; // Replace with your database username
-$password = "pscale_pw_unIJPdV9O9pO4ZlL1kDYnD7Fc8f70Cddl8CVwAncr0x"; // Replace with your database password
-$dbname = "pictures"; // Replace with your database name
+// Connect to the database
+$servername = "Pablos_Laptop";
+$username = "root";
+$password = "L@r3do10";
+$dbname = "pictures_dv";
+$conn = mysqli_connect($Pablos_Laptop, $root, $L@r3do10, $pictures_dv);
 
-// Create a new database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check for errors
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 }
 
-// Prepare the SQL statement to insert the picture and description into the database
-$stmt = $conn->prepare("INSERT INTO pictures (picture, description) VALUES (?, ?)");
+// Upload the image
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["picture"]["name"]);
+move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file);
 
-// Bind the parameters to the statement
-$stmt->bind_param("ss", $picture, $description);
-
-// Retrieve the picture and description from the form data
-$picture = $_FILES["picture"]["name"];
-$description = $_POST["description"];
-
-// Execute the statement and check for errors
-if ($stmt->execute()) {
-  echo "Picture uploaded successfully!";
+// Insert the image and description into the database
+$image = mysqli_real_escape_string($conn, $target_file);
+$description = mysqli_real_escape_string($conn, $_POST["description"]);
+$sql = "INSERT INTO images (image, description) VALUES ('$image', '$description')";
+if (mysqli_query($conn, $sql)) {
+  echo "Image uploaded successfully";
 } else {
-  echo "Error uploading picture: " . $conn->error;
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-// Close the statement and database connection
-$stmt->close();
-$conn->close();
+// Close the database connection
+mysqli_close($conn);
 ?>
